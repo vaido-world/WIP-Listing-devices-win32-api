@@ -7,7 +7,16 @@ C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared
 
 ```
 -nostdinc    do not use standard system include paths
-```		
+```
+
+```
+C:\Users\Juozas\Desktop>tcc  -nostdinc "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um" -run test.c
+In file included from test.c:1:
+<command line>:10: error: include file 'tccdefs.h' not found
+
+```
+
+
 
 
 ```
