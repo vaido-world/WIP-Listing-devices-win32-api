@@ -72,4 +72,39 @@ void PrintVolumes()
     } while (FindNextVolume(hFVol, volName, sizeof(volName)));
     FindVolumeClose(hFVol);
 }
+
+INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
+    PSTR lpCmdLine, INT nCmdShow)
+{
+	PrintVolumes();
+    return 0;
+}
+```
+
+### GCC 
+```
+C:\Users\Juozas\Desktop>gcc test.c
+test.c: In function 'PrintVolumes':
+test.c:20:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+         printf("error...\n");
+         ^~~~~~
+test.c:20:9: warning: incompatible implicit declaration of built-in function 'printf'
+test.c:20:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+test.c:41:13: warning: incompatible implicit declaration of built-in function 'printf'
+             printf("error...\n");
+             ^~~~~~
+test.c:41:13: note: include '<stdio.h>' or provide a declaration of 'printf'
+test.c:46:9: warning: incompatible implicit declaration of built-in function 'printf'
+         printf("Volume Type:%d, Device:%d, Partition:%d\n", (int)sdn.DeviceType, (int)sdn.DeviceNumber, (int)sdn.PartitionNumber);
+         ^~~~~~
+test.c:46:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+
+C:\Users\Juozas\Desktop>a
+Volume Type:7, Device:0, Partition:1
+Volume Type:7, Device:1, Partition:4
+Volume Type:7, Device:1, Partition:5
+Volume Type:7, Device:0, Partition:2
+Volume Type:7, Device:0, Partition:3
+Volume Type:7, Device:1, Partition:3
+Volume Type:2, Device:0, Partition:-1
 ```
