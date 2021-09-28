@@ -4,6 +4,8 @@
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared
 ```
 ## TCC
+Everything I tried does not work, TCC seems to not have compatible compiler extensions unlike GCC. Have to delete a lot of programming code.
+
 
 ```
 -nostdinc    do not use standard system include paths
