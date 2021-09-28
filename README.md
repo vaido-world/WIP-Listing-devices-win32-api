@@ -5,6 +5,10 @@ C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared
 ```
 
 
+```
+-nostdinc    do not use standard system include paths
+```		
+
 
 ```
 C:\Users\Juozas\Desktop>tcc "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um" -run test.c
